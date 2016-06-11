@@ -22,7 +22,8 @@ public class TesteHashList {
 		int auxHashPonteiro;
 		RandomAccessFile f = new RandomAccessFile(path+"cep.dat", "r");
 		RandomAccessFile fHash = new RandomAccessFile(path+"hash.dat", "rw");
-
+		
+		
 		while( f.getFilePointer() < f.length() ) // para Detectar EOF
 		{
 			// Saltos buscando os registros
@@ -35,10 +36,13 @@ public class TesteHashList {
 
 			//Valor de Hash gerado pelo valor do CEP
 			hash = Integer.valueOf(e.getCep())% tabela.length;
-						
+			
+			
+			
 			//Caso o valor do espaco seja vazio preencher com o CEP
 			//a posicao sera o valor do hash
-			if(tabela[hash]==null){auxHash=hash;
+			if(tabela[hash]==null){
+				auxHash=hash;
 				tabela[hash]= new Hash(e.getCep(),cont,0);
 			}
 			//Se ocorreu uma colisao

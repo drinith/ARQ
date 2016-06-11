@@ -6,7 +6,7 @@ import java.io.RandomAccessFile;
 import java.nio.charset.Charset;
 import java.util.Scanner;
 
-public class TesteLeHash {
+public class TesteLeHashReal {
 
 	static public void main(String[] args) throws IOException {
 
@@ -41,7 +41,7 @@ public class TesteLeHash {
 		posicaoRegHash = new String(posicaoHash,enc);
 		ponteiroRegHash = new String(ponteiroHash,enc);
 		
-		while (!ponteiroRegHash.equals("000000000") && !cepRegHash.equals(buscaCEP)){
+		while (!ponteiroRegHash.equals("0000000") && !cepRegHash.equals(buscaCEP)){
 		
 			hash.seek(Integer.valueOf(ponteiroRegHash)*24);
 			hash.readFully(cepHash);
