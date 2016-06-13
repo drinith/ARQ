@@ -11,7 +11,7 @@ public class TesteHashList {
 
 		
 		//String path = "/media/aluno/FELIPE_PR/";
-		String path = "F:/";
+		String path = "D:/";
 		
 		int cont=0;
 		int contHash=0;

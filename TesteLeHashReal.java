@@ -21,8 +21,8 @@ public class TesteLeHashReal {
 		byte [] ponteiroHash = new byte[7];
 		
 		
-		RandomAccessFile hash = new RandomAccessFile("F:/hashReal.dat", "r");
-		RandomAccessFile registro = new RandomAccessFile("F:/cep.dat", "r");
+		RandomAccessFile hash = new RandomAccessFile("D:/hashReal.dat", "r");
+		RandomAccessFile registro = new RandomAccessFile("D:/cep.dat", "r");
 		Endereco e = new Endereco();
 		
 		System.out.println("Digite o CEP");
@@ -41,13 +41,13 @@ public class TesteLeHashReal {
 		posicaoRegHash = new String(posicaoHash,enc);
 		ponteiroRegHash = new String(ponteiroHash,enc);
 		
-		while (!ponteiroRegHash.equals("0000000") && !cepRegHash.equals(buscaCEP)){
+		while (!ponteiroRegHash.equals("000000000") && !cepRegHash.equals(buscaCEP)){
 		
 			hash.seek(Integer.valueOf(ponteiroRegHash)*24);
 			hash.readFully(cepHash);
 			hash.readFully(posicaoHash);
 			hash.readFully(ponteiroHash);
-			
+	
 			
 			
 			cepRegHash = new String(cepHash,enc);

@@ -21,8 +21,8 @@ public class TesteLeHash {
 		byte [] ponteiroHash = new byte[7];
 		
 		
-		RandomAccessFile hash = new RandomAccessFile("F:/hashReal.dat", "r");
-		RandomAccessFile registro = new RandomAccessFile("F:/cep.dat", "r");
+		RandomAccessFile hash = new RandomAccessFile("D:/hash.dat", "r");
+		RandomAccessFile registro = new RandomAccessFile("D:/cep.dat", "r");
 		Endereco e = new Endereco();
 		
 		System.out.println("Digite o CEP");
