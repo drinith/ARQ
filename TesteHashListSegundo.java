@@ -1,28 +1,29 @@
 package br.com.trabalhohash;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
 
-public class TesteHashList {
+public class TesteHashListSegundo {
 	public static void main(String [] args) throws NumberFormatException, IOException{
 
 		
-		String path = "/media/aluno/FELIPE_PR/";
-		//String path = "D:/";
+		//String path = "/media/aluno/FELIPE_PR/";
+		String path = "D:/";
 		
 		int cont=0;
 		int contHash=0;
-		Hash[] tabela = new Hash[750000];
+		Hash[] tabela ;
 		Endereco e = new Endereco();
 		int hash;
 		int auxHash;
 		int auxHashPonteiro;
 		RandomAccessFile f = new RandomAccessFile(path+"cep.dat", "r");
 		RandomAccessFile fHash = new RandomAccessFile(path+"hash.dat", "rw");
-		
+		tabela = new Hash[(int)f.length()];
 		
 		while( f.getFilePointer() < f.length() ) // para Detectar EOF
 		{
@@ -109,7 +110,7 @@ public class TesteHashList {
 		/* Testar escrevendo com o campo CEP,ENDERECO ARQ CEP,PONTEIRO
 		 * escrever a colisao reapontando para o lugar certo
 		 * Implementar a leitura do arquivo   
-		 * pensar na questï¿½o relacionada de sempre escrever no fim
+		 * pensar na questão relacionada de sempre escrever no fim
 		 */
 		
 		

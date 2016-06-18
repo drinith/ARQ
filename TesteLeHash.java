@@ -10,6 +10,7 @@ public class TesteLeHash {
 
 	static public void main(String[] args) throws IOException {
 
+		String path = "/media/aluno/FELIPE_PR/";
 		String buscaCEP;
 		int valorHash;
 		String cepRegHash;
@@ -21,8 +22,8 @@ public class TesteLeHash {
 		byte [] ponteiroHash = new byte[7];
 		
 		
-		RandomAccessFile hash = new RandomAccessFile("D:/hash.dat", "r");
-		RandomAccessFile registro = new RandomAccessFile("D:/cep.dat", "r");
+		RandomAccessFile hash = new RandomAccessFile(path+"hash.dat", "r");
+		RandomAccessFile registro = new RandomAccessFile(path+"cep.dat", "r");
 		Endereco e = new Endereco();
 		
 		System.out.println("Digite o CEP");
